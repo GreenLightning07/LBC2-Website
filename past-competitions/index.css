@@ -54,6 +54,10 @@ header {
     width: 125px;
 }
 
+.logo{
+    height: 36.02px;
+}
+
 nav ul{
     display: flex;
     gap: 2rem;
