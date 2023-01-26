@@ -110,7 +110,6 @@ form{
     padding-top: 10rem;
 }
 
-.form div{
-    display: flex;
-    flex-direction: column;
+form label{
+    display: inline-block;
 }
