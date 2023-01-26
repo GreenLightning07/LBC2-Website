@@ -46,8 +46,12 @@ header {
     z-index: 1;
 }
 
-.logo {
+.logo img{
     width: 125px;
+}
+
+.logo{
+    bottom: 0;
 }
 
 nav ul{
