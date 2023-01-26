@@ -46,6 +46,10 @@ header {
     z-index: 1;
 }
 
+.logo {
+    width: 125px;
+}
+
 nav ul{
     display: flex;
     gap: 2rem;
