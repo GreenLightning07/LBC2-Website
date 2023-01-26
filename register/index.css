@@ -123,3 +123,16 @@ form label{
     align-items: center;
     justify-content: space-between;
 }
+
+form input{
+    background-color: white;
+    border-color: white;
+    border-style: solid;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 40px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
