@@ -50,8 +50,8 @@ header {
     width: 125px;
 }
 
-.logo{
-    bottom: 0;
+.logo a{
+    bottom: 0px;
 }
 
 nav ul{
