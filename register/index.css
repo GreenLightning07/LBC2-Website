@@ -108,6 +108,10 @@ main span {
 form{
     padding: 5rem;
     padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
 }
 
 form label{
