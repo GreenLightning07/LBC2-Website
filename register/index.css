@@ -122,7 +122,7 @@ form label {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 35px;
 }
 
 form input, select {
