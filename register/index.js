@@ -39,13 +39,14 @@ function formSubmit(e)
     let team_member3 = document.querySelector('#member3').value;
     let team_member4 = document.querySelector('#member4').value;
 
-    let db = ref(database, 'Competitors/' + experience_level + '/' + team_name)
+    let db = ref(database, 'Competitors/' + experience_level + '/' + team_name);
 
-    if(onValue(db, (snapshot) => {snapshot.exists()}))
-    {
-      console.log("team name already exists");
-      return;
-    }
+    onValue(db, (snapshot) => {
+      if(snapshot.exists()) {
+        console.log("team name already exitst");
+        return;
+      }})
+
     set(db, {
       team_lead_name: team_lead_name,
       team_lead_school: team_lead_school,
