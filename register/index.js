@@ -45,7 +45,8 @@ function formSubmit(e)
 
     onValue(db, (snapshot) => {
       if(snapshot.exists()) {
-        console.log("team name already exists");
+        console.log(snapshot);
+        console.log(snapshot.exists());
       }
       else {
         set(db, {
