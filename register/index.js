@@ -39,17 +39,17 @@ function formSubmit(e)
     let team_member3 = document.querySelector('#member3').value;
     let team_member4 = document.querySelector('#member4').value;
 
-    let db = ref(database, 'Competitors/' + experience_level + '/' + team_name);
+    let db = ref(database, 'Competitors/' + experience_level + '/');
 
     console.log(db);
 
     onValue(db, (snapshot) => {
-      if(snapshot.exists()) {
+      if(snapshot.value() != null) {
         console.log(snapshot);
         console.log(snapshot.exists());
       }
       else {
-        set(db, {
+        set(db + '/' + team_name, {
           team_lead_name: team_lead_name,
           team_lead_school: team_lead_school,
           team_lead_email: team_lead_email,
