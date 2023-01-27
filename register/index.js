@@ -45,7 +45,7 @@ function formSubmit(e)
 
     onValue(db, (snapshot) => {
       if(snapshot.val() != null) {
-        console.log(snapshot);
+        console.log(snapshot.val());
         console.log(snapshot.exists());
       }
       else {
