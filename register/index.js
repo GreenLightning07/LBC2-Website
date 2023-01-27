@@ -40,6 +40,15 @@ function formSubmit(e)
     let team_member3 = document.querySelector('#member3').value;
     let team_member4 = document.querySelector('#member4').value;
 
+    console.log(team_name);
+    console.log(experience_level);
+    console.log(team_lead_name);
+    console.log(team_lead_school);
+    console.log(team_lead_email);
+    console.log(team_member2);
+    console.log(team_member3);
+    console.log(team_member4);
+
     set(ref(database, "Users/" + team_name),
     {
         experience_level: experience_level,
