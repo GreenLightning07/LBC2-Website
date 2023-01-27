@@ -43,16 +43,16 @@ function formSubmit(e)
 
     onValue(db, (snapshot) => {
       if(snapshot.exists()) {
-        console.log("team name already exitst");
-        return;
+        console.log("team name already exists");
+      }
+      else {
+        set(db, {
+          team_lead_name: team_lead_name,
+          team_lead_school: team_lead_school,
+          team_lead_email: team_lead_email,
+          team_member2: team_member2,
+          team_member3: team_member3,
+          team_member4: team_member4
+        })
       }})
-
-    set(db, {
-      team_lead_name: team_lead_name,
-      team_lead_school: team_lead_school,
-      team_lead_email: team_lead_email,
-      team_member2: team_member2,
-      team_member3: team_member3,
-      team_member4: team_member4
-    })
 }   
