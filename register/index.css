@@ -50,15 +50,15 @@ header {
     z-index: 1;
 }
 
-.logo img{
+.logo img {
     width: 125px;
 }
 
-.logo{
+.logo {
     height: 36.02px;
 }
 
-nav ul{
+nav ul {
     display: flex;
     gap: 2rem;
     align-items: center;
@@ -67,7 +67,7 @@ nav ul{
     padding-left: 0;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     position: relative;
     color: #fff;
@@ -75,7 +75,6 @@ nav ul li a{
     font-weight: 600;
     font-size: 1rem;
 }
-
 
 nav ul li a::after {
     content: "";
@@ -105,17 +104,17 @@ main span {
 }
 
 /* form */
-form{
+form {
     padding: 5rem;
-    padding-top: 10rem;
     padding-bottom: 0;
+    padding-top: 10rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     gap: 3rem;
 }
 
-form label{
+form label {
     display: block;
 }
 
@@ -126,7 +125,7 @@ form label{
     gap: 2rem;
 }
 
-form input, select{
+form input, select {
     background-color: white;
     border-color: white;
     border-style: solid;
@@ -140,14 +139,20 @@ form input, select{
     font-weight: 700;
 }
 
-.buttons{
+.buttons {
     padding: 5rem;
-    padding-top: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 3rem;
     width: 100%;
-    margin:0;
+}
+
+.buttons a {
+    width: 100%;
+}
+
+.buttons button {
+    width: 50%;
 }
