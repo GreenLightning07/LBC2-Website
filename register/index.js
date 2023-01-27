@@ -39,12 +39,12 @@ function formSubmit(e)
     let team_member3 = document.querySelector('#member3').value;
     let team_member4 = document.querySelector('#member4').value;
 
-    console.log(team_name);
-    console.log(experience_level);
-    console.log(team_lead_name);
-    console.log(team_lead_school);
-    console.log(team_lead_email);
-    console.log(team_member2);
-    console.log(team_member3);
-    console.log(team_member4);
+    set(ref(database, 'Competitors/' + experience_level + '/' + team_name), {
+      team_lead_name: team_lead_name,
+      team_lead_school: team_lead_school,
+      team_lead_email: team_lead_email,
+      team_member2: team_member2,
+      team_member3: team_member3,
+      team_member4: team_member4
+    })
 }   
