@@ -41,7 +41,7 @@ function formSubmit(e)
 
     let db = ref(database, 'Competitors/' + experience_level + '/' + team_name)
 
-    if(onValue(db, snapshot.exists()))
+    if(onValue(db, (snapshot) => {snapshot.exists()}))
     {
       console.log("team name already exists");
       return;
