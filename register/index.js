@@ -39,7 +39,7 @@ function formSubmit(e)
     let team_member3 = document.querySelector('#member3').value;
     let team_member4 = document.querySelector('#member4').value;
 
-    let db = ref(database, 'Competitors/' + experience_level + '/');
+    let db = ref(database, 'Competitors/' + experience_level + '/' + team_name);
 
     console.log(db);
 
@@ -49,7 +49,7 @@ function formSubmit(e)
         console.log(snapshot.exists());
       }
       else {
-        set(db + '/' + team_name, {
+        set(db, {
           team_lead_name: team_lead_name,
           team_lead_school: team_lead_school,
           team_lead_email: team_lead_email,
