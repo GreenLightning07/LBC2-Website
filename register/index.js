@@ -39,6 +39,11 @@ function formSubmit(e)
     let team_member3 = document.querySelector('#member3').value;
     let team_member4 = document.querySelector('#member4').value;
 
+    if(onValue('Competitors/' + experience_level + '/' + team_name, snapshot => {snapshot.exists();}))
+    {
+      console.log("team name already exists");
+      return;
+    }
     set(ref(database, 'Competitors/' + experience_level + '/' + team_name), {
       team_lead_name: team_lead_name,
       team_lead_school: team_lead_school,
