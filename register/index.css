@@ -138,3 +138,13 @@ form input, select{
     font-size: 1.5rem;
     font-weight: 700;
 }
+
+.buttons{
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 50%;
+}
