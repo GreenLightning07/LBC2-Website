@@ -24,7 +24,8 @@
     const database = getDatabase(app);
 
 // create event listener on form
-document.getElementById("competitor-signup").addEventListener('submit', formSubmit);
+let form = document.getElementById("competitor-signup");
+form.addEventListener('submit', formSubmit);
 
 function formSubmit(e) 
 {
@@ -43,8 +44,8 @@ function formSubmit(e)
 
     onValue(db, (snapshot) => {
       if(snapshot.val() != null) {
-        console.log("team already exists");
-        console.log(snapshot.val());
+        document.querySelector('#team-name').setCustomValidity('Team name already taken');
+        document.querySelector('#team-name').reportValidity();
       }
       else {
         console.log("adding team: " + team_name);
@@ -56,6 +57,9 @@ function formSubmit(e)
           team_member3: team_member3,
           team_member4: team_member4
         })
+        form.reset();
+        form.scrollIntoView();
+        document.querySelector('#thanks').style.display = "block";
       }
     }, {
       onlyOnce: true

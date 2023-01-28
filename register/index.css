@@ -104,6 +104,11 @@ main span {
 }
 
 /* form */
+
+#thanks {
+    display: none;
+}
+
 form {
     padding: 5rem;
     padding-bottom: 0;
