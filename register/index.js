@@ -1,7 +1,7 @@
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-analytics.js";
-    import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js"
+    import { getDatabase, ref, set, onValue, remove } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js"
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
   
@@ -41,14 +41,13 @@ function formSubmit(e)
 
     let db = ref(database, 'Competitors/' + experience_level + '/' + team_name);
 
-    console.log(db);
-
     onValue(db, (snapshot) => {
       if(snapshot.val() != null) {
+        console.log("team already exists");
         console.log(snapshot.val());
-        console.log(snapshot.exists());
       }
       else {
+        console.log("adding team: " + team_name);
         set(db, {
           team_lead_name: team_lead_name,
           team_lead_school: team_lead_school,
@@ -57,5 +56,8 @@ function formSubmit(e)
           team_member3: team_member3,
           team_member4: team_member4
         })
-      }})
-}   
+      }
+    }, {
+      onlyOnce: true
+    });
+} 
