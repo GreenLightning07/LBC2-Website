@@ -23,28 +23,28 @@
         <form action="" method="post" id="competitor-signup">
             <h1>Competitor Sign Up</h1>
             <div>
-                <label for="team-name">Team Name</label>
-                <input type="text" name="team-name" id="team-name">
+                <label for="team-name">Team Name <span>*</span></label>
+                <input type="text" name="team-name" id="team-name" required>
             </div>
             <div>
-                <label for="experience-level">Experience Level</label>
-                <select name="experience-level" id="experience-level">
+                <label for="experience-level">Experience Level <span>*</span></label>
+                <select name="experience-level" id="experience-level" required>
                         <option value="beginner">Beginner</option>
                         <option value="advanced">Done CTFs Before</option>
                 </select>
             </div>
             <div class="lead-info">
                 <div>
-                    <label for="lead-name">Team Lead's Name</label>
-                    <input type="text" name="lead-name" id="lead-name">
+                    <label for="lead-name">Team Lead's Name <span>*</span></label>
+                    <input type="text" name="lead-name" id="lead-name" required>
                 </div>
                 <div>
-                    <label for="lead-school">Team Lead's School</label>
-                    <input type="text" name="lead-school" id="lead-school">
+                    <label for="lead-school">Team Lead's School <span>*</span></label>
+                    <input type="text" name="lead-school" id="lead-school" required>
                 </div>
                 <div>
-                    <label for="lead-email">Team Lead's Email</label>
-                    <input type="email" name="lead-email" id="lead-email">
+                    <label for="lead-email">Team Lead's Email <span>*</span></label>
+                    <input type="email" name="lead-email" id="lead-email" required>
                 </div>
             </div>
             <div>
