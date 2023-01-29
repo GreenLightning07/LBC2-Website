@@ -147,7 +147,7 @@ nav ul li a:hover::after {
     background-color: white;
     color: #1C1C1C;
     font-size: 1.5rem;
-    padding: 5rem;
+    padding: 5vw;
     letter-spacing: 1px;
 }
 
@@ -168,7 +168,7 @@ main span {
 /* Photo Gallery */
 .gallery {
     font-size: 1.5rem;
-    padding: 5rem;
+    padding: 5vw;
     text-align: center;
 }
 
@@ -190,7 +190,7 @@ main span {
     position: relative;
     top: -40px;
     font-size: 1.5rem;
-    padding: 5rem;
+    padding: 5vw;
 }
 
 /* Contact */
@@ -200,7 +200,7 @@ main span {
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-    padding: 5rem;
+    padding: 5vw;
     padding-top: 0;
 }
 
