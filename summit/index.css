@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: #1C1C1C;
+}
+
+h2 {
+    margin: 0;
+}
+
+button {
+    background-color: white;
+    border-color: white;
+    border-style: solid;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 40px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1C1C1C;
+    transition: transform 0.1s ease-in-out
+}
+
+button:hover {
+    background-image: linear-gradient(45deg, #114084, #82B7DC);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Nav Bar */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: #1C1C1C;
+    height: 4.5rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.logo img {
+    width: 125px;
+}
+
+.logo {
+    height: 36.02px;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    padding-left: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    position: relative;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    background-color: #ffffff00;
+    height: 3px;
+    right: 0;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    background-color: #fff;
+}
+
+/* Main Content */
+main {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+main span {
+    color: #aa3434;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+/* form */
+
+#thanks {
+    display: none;
+}
+
+form {
+    padding: 5rem;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+form label {
+    display: block;
+}
+
+form input, select {
+    background-color: white;
+    border-color: white;
+    border-style: solid;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 40px;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.buttons {
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+}
+
+.buttons button {
+    width: 25%;
+}

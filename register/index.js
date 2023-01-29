@@ -1,34 +1,38 @@
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-analytics.js";
-    import { getDatabase, ref, set, onValue, remove } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js"
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-  
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-      apiKey: "AIzaSyBJ31k0TJG0tMvDWygVLk9StwW8Ca-872M",
-      authDomain: "lbc2-30710.firebaseapp.com",
-      databaseURL: "https://lbc2-30710-default-rtdb.firebaseio.com",
-      projectId: "lbc2-30710",
-      storageBucket: "lbc2-30710.appspot.com",
-      messagingSenderId: "571248148714",
-      appId: "1:571248148714:web:0085b1d1323732ec7d1793",
-      measurementId: "G-GZZC75YQF8"
-    };
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-    const database = getDatabase(app);
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-analytics.js";
+import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js"
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+    apiKey: "AIzaSyBJ31k0TJG0tMvDWygVLk9StwW8Ca-872M",
+    authDomain: "lbc2-30710.firebaseapp.com",
+    databaseURL: "https://lbc2-30710-default-rtdb.firebaseio.com",
+    projectId: "lbc2-30710",
+    storageBucket: "lbc2-30710.appspot.com",
+    messagingSenderId: "571248148714",
+    appId: "1:571248148714:web:0085b1d1323732ec7d1793",
+    measurementId: "G-GZZC75YQF8"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const database = getDatabase(app);
 
 // create event listener on form
 let form = document.getElementById("competitor-signup");
 form.addEventListener('submit', formSubmit);
 
-function formSubmit(e) 
-{
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function formSubmit(e) {  
+   
     e.preventDefault();
     // get form values
     let team_name = document.querySelector('#team-name').value;
@@ -43,12 +47,13 @@ function formSubmit(e)
     let db = ref(database, 'Competitors/' + experience_level + '/' + team_name);
 
     onValue(db, (snapshot) => {
+      console.log("yoyyo");
       if(snapshot.val() != null) {
-        document.querySelector('#team-name').setCustomValidity('Team name already taken');
+        document.querySelector('#team-name').setCustomValidity('Team name already taken. Please wait 5 seconds then try again');
         document.querySelector('#team-name').reportValidity();
-      }
+        sleep(5000).then(() => {document.querySelector('#team-name').setCustomValidity('');});
+      } 
       else {
-        console.log("adding team: " + team_name);
         set(db, {
           team_lead_name: team_lead_name,
           team_lead_school: team_lead_school,

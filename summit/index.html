@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="../images/lbc2-favicon.png">
+    <title>Summit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <a href="../" class="logo"><img src="../images/lbc2-logo.png" alt="lbc2-logo"></a>
+        <nav>
+            <ul>
+                <li><a href="../">Home</a></li>
+                <li><a href="../details/">Details</a></li>
+                <li><a href="../past-competitions/">Past Competitions</a></li>
+                <li><a href="../lbcsi/">LBCSI</a></li>
+                <li><a href="../register/">Register</a></li>                    
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="" method="post" id="summit-signup">
+            <h1>Summit Registration</h1>
+
+            <p id="thanks"><span>*</span> Thanks for registering for the LBC2 Workforce Developement Summit. We are excited to see you there!</p>
+
+            <div>
+                <label for="name">Name <span>*</span></label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div>
+                <label for="email">Email <span>*</span></label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div>
+                <label for="select">Select <span>*</span></label>
+                <select name="select" id="select" required>
+                    <option value="parent">Parent</option>
+                    <option value="educator">Educator</option>
+                    <option value="buisness-professional">Buisness Professional</option>
+                </select>
+            </div>
+        </form>
+        <div class="buttons">
+            <div><button form="summit-signup" type="submit">Register</button></div>
+            <div><a href="../register/"><button>Competitor Registration</button></a></div>
+        </div>
+    </main>
+</body>
+<script src="index.js" type="module"></script>
