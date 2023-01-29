@@ -40,19 +40,18 @@ function formSubmit(e) {
     let select = document.querySelector('#select').value;
 
     // add user
-    let db = ref(database, 'Summit/' + name);
+    let db = ref(database, 'Summit/' + select + '/' + name);
 
-    onValue(ref(database, 'Summit/' + name + '/email'), (snapshot) => {
-        if(snapshot.val() == email) {
+    onValue(db, (snapshot) => {
+        if(snapshot.val() != null) {
             console.log(snapshot.val());
-            document.querySelector('#email').setCustomValidity('Someone has already registered with this email. please wait 5 seconds then try again');
-            document.querySelector('#email').reportValidity();
-            sleep(5000).then(() => {document.querySelector('#team-name').setCustomValidity('');})
+            document.querySelector('#name').setCustomValidity('Someone has already registered with this name. Add your initial or a number to the end of your name. Please wait 5 seconds then try again');
+            document.querySelector('#name').reportValidity();
+            sleep(5000).then(() => {document.querySelector('#name').setCustomValidity('');})
         }
         else {
             set(db, {
-                email: email,
-                select: select
+                email: email
             })
             form.reset();
             form.scrollIntoView();
