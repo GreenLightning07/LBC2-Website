@@ -121,15 +121,15 @@ main span {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
     gap: 5rem;
 }
 
 #top img {
-    width: 400px;
+    width: 25rem;
 }
 
 #bottom img {
-    width: 500px;
+    width: 35rem;
     border-radius: 50px;
 }
