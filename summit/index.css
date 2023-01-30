@@ -142,9 +142,4 @@ form input, select {
     flex-direction: column;
     justify-content: center;
     gap: 3rem;
-    width: 100%;
-}
-
-.buttons button {
-    width: 25%;
 }
