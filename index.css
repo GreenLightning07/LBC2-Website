@@ -30,6 +30,11 @@ button:hover {
     transform: scale(1.05);
 }
 
+.menu{
+    filter: invert();
+    display: none;
+}
+
 /* Nav Bar */
 header {
     display: flex;
@@ -240,5 +245,9 @@ main span {
 @media screen and (max-width: 1160px) {
     nav {
         display: none;
+    }
+
+    .menu {
+        display: block;
     }
 }
