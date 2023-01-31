@@ -169,26 +169,6 @@ main span {
     border-radius: 25px;
 }
 
-/* Photo Gallery */
-.gallery {
-    font-size: 1.5rem;
-    padding: 5rem;
-    text-align: center;
-}
-
-.gallery img {
-    width: 250px;
-    border-radius: 25px;
-}
-
-.gallery-images {
-    margin-top: 2rem;
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-}
-
 /* LBCSI */
 .lbcsi {
     position: relative;
@@ -248,6 +228,22 @@ main span {
     }
 
     .menu {
+        display: block;
+    }
+
+    .title img {
+        display: none;
+    }
+
+    .title {
+        display: block
+    }
+
+    .contact img {
+        display: none;
+    }
+
+    .contact {
         display: block;
     }
 }
