@@ -68,7 +68,7 @@ nav ul{
     padding-left: 0;
 }
 
-nav ul li a{
+ul li a{
     text-decoration: none;
     position: relative;
     color: #fff;
@@ -78,7 +78,7 @@ nav ul li a{
 }
 
 
-nav ul li a::after {
+ul li a::after {
     content: "";
     position: absolute;
     background-color: #ffffff00;
@@ -89,7 +89,7 @@ nav ul li a::after {
     transition: 0.5s;
 }
 
-nav ul li a:hover::after {
+ul li a:hover::after {
     background-color: #fff;
 }
 
@@ -98,12 +98,23 @@ nav ul li a:hover::after {
     height: 100%;
     width: 0;
     position: fixed;
+    display: none;
     z-index: 1;
     top: 0;
     right: 0;;
     background-color: #1c1c1cf4;
     overflow-x: hidden;
     transition: 0.5s;
+}
+
+.overlay-nav ul{
+    padding-top: 7rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
 }
 
 /* title */
@@ -258,6 +269,10 @@ main span {
     }
 
     .contact {
+        display: block;
+    }
+
+    .overlay {
         display: block;
     }
 }
