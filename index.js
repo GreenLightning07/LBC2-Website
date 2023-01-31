@@ -10,8 +10,6 @@ function navClicked() {
     } else {
         document.querySelector('.overlay').style.width='100%';
         menu.style.rotate='90deg';
-        document.querySelector('header').style.zIndex=0;
-        menu.style.zIndex=2;
         open = true;
     }
 }
