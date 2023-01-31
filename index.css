@@ -30,7 +30,7 @@ button:hover {
     transform: scale(1.05);
 }
 
-.menu{
+.menu {
     filter: invert();
     display: none;
 }
@@ -48,7 +48,7 @@ header {
     left: 0;
     right: 0;
     top: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 .logo img{
@@ -91,6 +91,19 @@ nav ul li a::after {
 
 nav ul li a:hover::after {
     background-color: #fff;
+}
+
+/* overlay menu */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;;
+    background-color: #1c1c1cf4;
+    overflow-x: hidden;
+    transition: 0.5s;
 }
 
 /* title */
@@ -229,6 +242,7 @@ main span {
 
     .menu {
         display: block;
+        transition:  0.5s;
     }
 
     .title img {
