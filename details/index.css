@@ -189,7 +189,7 @@ h2 {
     margin-top: 5rem;
     margin-bottom: 5rem;
     border-radius: 25px;
-    width: 100%;
+    height: 30rem;
 }
 
 /* Reasons to Compete */
@@ -203,7 +203,7 @@ h2 {
 }
 
 .reason-compete img {
-    width: 500px;
+    width: 37vw;
     border-radius: 50px;
 }
 

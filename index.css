@@ -124,8 +124,8 @@ ul li a:hover::after {
     justify-content: center;
     gap: 5rem;
     padding: 5rem;
-    padding-top: 21vmin;
-    padding-bottom: 21vmin;
+    padding-top: 25vh;
+    padding-bottom: 25vh;
     background-color: #1C1C1C;
 }
 
@@ -154,6 +154,7 @@ ul li a:hover::after {
     margin: 0;
     font-size: 1.5em;
     font-weight: 600;
+    max-width: 530px;
 }
 
 .title img {
@@ -175,7 +176,7 @@ ul li a:hover::after {
     background-color: white;
     color: #1C1C1C;
     font-size: 1.5rem;
-    padding: 5rem;
+    padding: 5vw;
     letter-spacing: 1px;
 }
 
@@ -198,7 +199,7 @@ main span {
     position: relative;
     top: -40px;
     font-size: 1.5rem;
-    padding: 5rem;
+    padding: 5vw;
 }
 
 /* Contact */
@@ -208,7 +209,7 @@ main span {
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-    padding: 5rem;
+    padding: 5vw;
     padding-top: 0;
 }
 
