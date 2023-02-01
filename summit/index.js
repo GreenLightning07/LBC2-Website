@@ -28,7 +28,7 @@ function sleep(ms) {
 }
 
 // create event listener on form
-let form = document.getElementById("summit-signup");
+let form = document.getElementById('summit-signup');
 form.addEventListener('submit', formSubmit);
 
 function formSubmit(e) {
