@@ -260,6 +260,7 @@ main span {
 
     .menu {
         display: block;
+        width: 5rem;
         transition:  0.5s;
     }
 
@@ -281,5 +282,13 @@ main span {
 
     .overlay {
         display: block;
+    }
+
+    header {
+        height: 8rem;
+    }
+
+    .logo img {
+        width: 10rem;
     }
 }

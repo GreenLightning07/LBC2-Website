@@ -53,7 +53,7 @@ header {
     left: 0;
     right: 0;
     top: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 .logo img {
@@ -118,7 +118,13 @@ ul li a:hover::after {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
+    gap: 5rem;
+}
+
+.overlay a {
+    font-size: 3rem;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 /* Main Content */
@@ -183,6 +189,7 @@ form input, select {
 
     .menu {
         display: block;
+        width: 5rem;
         transition:  0.5s;
     }
 
@@ -204,5 +211,13 @@ form input, select {
 
     .overlay {
         display: block;
+    }
+
+    header {
+        height: 8rem;
+    }
+
+    .logo img {
+        width: 10rem;
     }
 }
