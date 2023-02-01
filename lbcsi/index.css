@@ -195,4 +195,16 @@ main span {
     .overlay {
         display: block;
     }
+
+    #bottom img {
+        display: none;
+    }
+
+    .legacy div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5rem;
+    }
 }

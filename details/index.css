@@ -6,7 +6,7 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     color: white;
-    background-color: #1C1C1C;
+    background-color: white;
 }
 
 h2 {
@@ -135,9 +135,8 @@ main span {
 }
 
 /* Divider */
-.bottom-divider {
-    position: relative;
-    bottom: -10px;
+.divider {
+    background-color: #1C1C1C;
 }
 
 /* Details */
@@ -151,6 +150,7 @@ main span {
 
 /* Schedule */
 .schedule {
+    background-color: #1C1C1C;
     padding: 5rem;
 }
 .schedule div{
@@ -173,10 +173,12 @@ main span {
 
 /* Prizes */
 .prizes {
+    position: relate;
     background-color: #fff;
     color: #1C1C1C;
     padding: 5rem;
     text-align: center;
+    top: 0;
 }
 
 h2 {
@@ -197,6 +199,7 @@ h2 {
     gap: 3rem;
     align-items: center;
     justify-content: center;
+    background-color: #1C1C1C;
 }
 
 .reason-compete img {
@@ -221,6 +224,7 @@ h2 {
 /* Summit */
 .summit {
     padding: 5rem;
+    background-color: #1C1C1C;
 }
 
 .summit p a{
@@ -273,6 +277,10 @@ h2 {
 
     .overlay {
         display: block;
+    }
+
+    .hide-mobile {
+        display: none;
     }
 }
 
