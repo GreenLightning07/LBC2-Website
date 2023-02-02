@@ -202,8 +202,6 @@ main span {
 
 /* LBCSI */
 .lbcsi {
-    position: relative;
-    top: -40px;
     font-size: 1.5rem;
     padding: 5vw;
 }
