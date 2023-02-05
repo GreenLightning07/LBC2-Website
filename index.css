@@ -35,6 +35,10 @@ button:hover {
     display: none;
 }
 
+.white-background {
+    background-color: #ffffff;
+}
+
 /* Nav Bar */
 header {
     display: flex;
@@ -170,11 +174,14 @@ ul li a:hover::after {
 
 /* divider */
 #wave-divider1{
-    background-color: #fff;
+    position: relative;
+    top: -2px;
 }
 
 #wave-divider2 img{
-    background-color: #ffffff;
+    position: relative;
+    bottom: -2px;
+    vertical-align: bottom;
 }
 /* main content */
 /* about section */
