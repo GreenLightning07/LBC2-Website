@@ -39,6 +39,9 @@ button:hover {
     display: none;
 }
 
+.white-background {
+    background-color: #ffffff;
+}
 
 /* Nav Bar */
 header {
@@ -141,12 +144,15 @@ main span {
 }
 
 /* Divider */
-#wave-divider1{
-    background-color: #fff;
+.divider1 {
+    position: relative;
+    top: -2px;
 }
 
-#wave-divider2 img{
-    background-color: #ffffff;
+.divider2 img {
+    vertical-align: bottom;
+    position: relative;
+    bottom: -2px
 }
 
 /* 2021 */
