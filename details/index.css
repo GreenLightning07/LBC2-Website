@@ -39,6 +39,10 @@ button:hover {
     display: none;
 }
 
+.black-background {
+    background-color: #1C1C1C;
+}
+
 
 /* Nav Bar */
 header {
@@ -141,9 +145,16 @@ main span {
 }
 
 /* Divider */
-.divider {
-    background-color: #1C1C1C;
+.divider1 {
+    position: relative;
+    top: -2px;
 }
+
+.divider2 {
+    vertical-align: bottom;
+}
+
+
 
 /* Details */
 .details {
