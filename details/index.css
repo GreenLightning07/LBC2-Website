@@ -152,6 +152,8 @@ main span {
 
 .divider2 {
     vertical-align: bottom;
+    position: relative;
+    bottom: -2px;
 }
 
 
