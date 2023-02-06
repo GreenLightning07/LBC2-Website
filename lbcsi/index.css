@@ -39,6 +39,9 @@ button:hover {
     display: none;
 }
 
+.black-background {
+    background-color: #1C1C1C;
+}
 
 /* Nav Bar */
 header {
@@ -126,6 +129,12 @@ ul li a:hover::after {
     font-size: 3rem;
     white-space: nowrap;
     overflow: hidden;
+}
+
+/* Divider */
+.divider {
+    position: relative;
+    top: -2px;
 }
 
 /* Main Content */
