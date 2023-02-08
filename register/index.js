@@ -48,7 +48,6 @@ function formSubmit(e) {
     let email_db = ref(database, 'Emails/');
 
     onValue(db, (snapshot) => {
-      console.log("yoyyo");
       if(snapshot.val() != null) {
         document.querySelector('#team-name').setCustomValidity('Team name already taken. Please wait 5 seconds then try again');
         document.querySelector('#team-name').reportValidity();
@@ -62,9 +61,6 @@ function formSubmit(e) {
           team_member2: team_member2,
           team_member3: team_member3,
           team_member4: team_member4
-        })
-        set(email_db, {
-          team_name: team_lead_email
         })
         form.reset();
         form.scrollIntoView();

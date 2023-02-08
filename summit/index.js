@@ -54,9 +54,6 @@ function formSubmit(e) {
             set(db, {
                 email: email
             })
-            set(email_db, {
-                name: email
-              })
             form.reset();
             form.scrollIntoView();
             document.querySelector('#thanks').style.display = "block";
