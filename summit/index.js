@@ -41,6 +41,7 @@ function formSubmit(e) {
 
     // add user
     let db = ref(database, 'Summit/' + select + '/' + name);
+    let email_db = ref(database, 'Emails/');
 
     onValue(db, (snapshot) => {
         if(snapshot.val() != null) {
@@ -53,6 +54,9 @@ function formSubmit(e) {
             set(db, {
                 email: email
             })
+            set(email_db, {
+                name: email
+              })
             form.reset();
             form.scrollIntoView();
             document.querySelector('#thanks').style.display = "block";

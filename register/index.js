@@ -45,6 +45,7 @@ function formSubmit(e) {
     let team_member4 = document.querySelector('#member4').value;
 
     let db = ref(database, 'Competitors/' + experience_level + '/' + team_name);
+    let email_db = ref(database, 'Emails/');
 
     onValue(db, (snapshot) => {
       console.log("yoyyo");
@@ -61,6 +62,9 @@ function formSubmit(e) {
           team_member2: team_member2,
           team_member3: team_member3,
           team_member4: team_member4
+        })
+        set(email_db, {
+          team_name: team_lead_email
         })
         form.reset();
         form.scrollIntoView();
